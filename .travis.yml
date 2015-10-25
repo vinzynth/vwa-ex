@@ -16,4 +16,4 @@ install: mvn clean install -DskipTests -T 3C -Dgpg.skip=true -f vwa-ex/pom.xml
 before_script:
   - psql -c 'create database test;' -U postgres 
 
-script: mvn clean test -Dgpg.skip=true
+script: mvn clean test -Dgpg.skip=true -f vwa-ex/pom.xml
